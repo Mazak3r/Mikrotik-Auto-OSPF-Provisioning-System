@@ -75,7 +75,7 @@ python3 manage.py 10.10.20.2 --via 192.168.101.8
 
 # Via neighbor MAC-Telnet
 python3 manage.py 10.10.20.6 --via 192.168.101.8 --mac 0C:2F:5D:8B:00:08
-```
+
 
 ⚙️ Configuration
 Edit the top of ospf.py:
@@ -95,7 +95,7 @@ Pool for point-to-point links
 PTP_PREFIXLEN
 PtP subnet mask length
 30
----
+
 
 📁 Project Structure
 
@@ -104,41 +104,40 @@ PtP subnet mask length
 ├── requirements.txt     # Python dependencies
 ├── README.md            # This file
 └── network_state.json   # Auto-generated state file (persists across runs)
+```
 
-🔧 Features
+## 🔧 Features
 Main Script (ospf.py)
-Interactive & automatic modes – defaults provided, Enter to accept
-Duplicate prevention – state file tracks provisioned routers
-Comprehensive verification – firewall, OSPF, routes, services checked post-deployment
-Failure diagnostics – deep inspection of failed routers via MAC-Telnet
-Cleanup – removes stale IPs from parent routers
-Version detection – logs RouterOS version for compatibility tracking
-Management Tool (manage.py)
-Full config dump: identity, IPs, routes, firewall, NAT, OSPF, services
-Interactive edit mode: type RouterOS commands directly
-Works through neighbors: MAC-Telnet tunneling via API-reachable routers
+- Interactive & automatic modes – defaults provided, Enter to accept
+- Duplicate prevention – state file tracks provisioned routers
+- Comprehensive verification – firewall, OSPF, routes, services checked post-deployment
+- Failure diagnostics – deep inspection of failed routers via MAC-Telnet
+- Cleanup – removes stale IPs from parent routers
+- Version detection – logs RouterOS version for compatibility tracking
+- Management Tool (manage.py)
+- Full config dump: identity, IPs, routes, firewall, NAT, OSPF, services
+- Interactive edit mode: type RouterOS commands directly
+- Works through neighbors: MAC-Telnet tunneling via API-reachable routers
 
-📝 Requirements
+## 📝 Requirements
 
-routeros-api==0.17.0
-paramiko==3.4.0
+- routeros-api==0.17.0
+- paramiko==3.4.0
 
-🧪 Testing
+## 🧪 Testing
 Tested with:
-RouterOS v6.49.x
-RouterOS v7.6+
-Python 3.10 on Ubuntu 22.04
 
-🛑 Limitations & Security Considerations
-Lab environment only – designed for isolated test networks
-Default credentials – change USERNAME and PASSWORD before production use
-MAC-Telnet exposed – ensure physical access is restricted to authorized devices
-Firewall rules – automatically adds broad accepts for management subnet
+- RouterOS v6.49.x
+- RouterOS v7.6+
+- Python 3.10 on Ubuntu 22.04
 
-📄 License
-MIT License – see LICENSE file.
 
-🙏 Acknowledgments
-MikroTik for RouterOS and the API library
-Paramiko for SSH support
-Open-source community for inspiration and feedback
+## 📄 License
+
+- MIT License – see LICENSE file.
+
+## 🙏 Acknowledgments
+
+- MikroTik for RouterOS and the API library
+- Paramiko for SSH support
+- Open-source community for inspiration and feedback
