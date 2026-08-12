@@ -1,4 +1,4 @@
-# MikroTik Auto-Provisioning System
+# MikroTik Auto-OSPF-Provisioning System
 
 A Python-based network automation framework for zero-touch provisioning and management of MikroTik RouterOS devices in OSPF-based lab topologies.
 
