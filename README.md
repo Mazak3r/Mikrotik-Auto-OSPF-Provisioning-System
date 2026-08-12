@@ -7,7 +7,7 @@ A Python-based network automation framework for zero-touch provisioning and mana
 
 ---
 
-## 📋 Overview
+##  Overview
 
 This project automates the complete lifecycle of MikroTik router deployment in a lab environment:
 
@@ -21,7 +21,7 @@ This project automates the complete lifecycle of MikroTik router deployment in a
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 PC (Management) ─── RT1 ─── RT2 ─── RT3
 │
@@ -36,7 +36,7 @@ All routers run OSPF in a backbone area. The script:
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -77,7 +77,7 @@ python3 manage.py 10.10.20.2 --via 192.168.101.8
 python3 manage.py 10.10.20.6 --via 192.168.101.8 --mac 0C:2F:5D:8B:00:08
 
 
-⚙️ Configuration
+ Configuration
 Edit the top of ospf.py:
 
 Variable
@@ -97,7 +97,7 @@ PtP subnet mask length
 30
 
 
-📁 Project Structure
+ Project Structure
 
 ├── ospf.py              # Main auto-provisioning script
 ├── manage.py            # Interactive configuration manager
@@ -106,7 +106,7 @@ PtP subnet mask length
 └── network_state.json   # Auto-generated state file (persists across runs)
 ```
 
-## 🔧 Features
+##  Features
 Main Script (ospf.py)
 - Interactive & automatic modes – defaults provided, Enter to accept
 - Duplicate prevention – state file tracks provisioned routers
@@ -119,12 +119,12 @@ Main Script (ospf.py)
 - Interactive edit mode: type RouterOS commands directly
 - Works through neighbors: MAC-Telnet tunneling via API-reachable routers
 
-## 📝 Requirements
+##  Requirements
 
 - routeros-api==0.17.0
 - paramiko==3.4.0
 
-## 🧪 Testing
+##  Testing
 Tested with:
 
 - RouterOS v6.49.x
@@ -132,11 +132,11 @@ Tested with:
 - Python 3.10 on Ubuntu 22.04
 
 
-## 📄 License
+##  License
 
 - MIT License – see LICENSE file.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - MikroTik for RouterOS and the API library
 - Paramiko for SSH support
