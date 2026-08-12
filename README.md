@@ -75,6 +75,7 @@ python3 manage.py 10.10.20.2 --via 192.168.101.8
 
 # Via neighbor MAC-Telnet
 python3 manage.py 10.10.20.6 --via 192.168.101.8 --mac 0C:2F:5D:8B:00:08
+```
 
 ⚙️ Configuration
 Edit the top of ospf.py:
